@@ -1,0 +1,107 @@
+.shopping-cart-back-drop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+.shopping-cart-modal-window {
+  position: absolute;
+  z-index: 2;
+  top: 0%;
+  right: 0%;
+  transform: translate(10px, 0px);
+  width: 417px;
+  height: 746px;
+  background-color: #fff;
+}
+.shopping-cart-modal__wrapper {
+  padding: 28px;
+}
+.shopping-cart-modal-window h2 {
+  display: inline-block;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+.shopping-cart-modal-window hr {
+  display: inline-block;
+  justify-content: flex-start;
+  width: 286px;
+  height: 1px;
+  background: #d9d9d9;
+  margin: 0;
+}
+.shopping-cart-text-main {
+  padding-top: 10px;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+.shopping-cart-modal-window-product {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.shopping-cart-text {
+  padding-left: 32px;
+}
+.shopping-cart-text h3 {
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.shopping-cart-text-main p:nth-child(1) {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+.shopping-cart-text-main p:nth-child(2) {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+.shopping-cart-text-main p:nth-child(3) {
+  color: #b88e2f;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.shopping-cart-img {
+  border-radius: 10px;
+  width: 105px;
+  height: 105px;
+}
+.modal-btn-close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.icon-group {
+  right: 42px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+.icon-vector {
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+}

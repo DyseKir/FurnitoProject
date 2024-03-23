@@ -1,0 +1,40 @@
+/* font-family: 'Montserrat', sans-serif;
+ font-family: 'Poppins', sans-serif; */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+p {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.is-hidden {
+  display: none;
+}
+.break-line {
+  margin: 0;
+  color: #d9d9d9;
+}

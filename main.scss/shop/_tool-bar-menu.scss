@@ -1,0 +1,81 @@
+.tool-bar-menu {
+  background: #f9f1e7;
+}
+.tool-bar-menu__wrapper {
+  padding: 22px 0px;
+  gap: 348px;
+  display: flex;
+}
+.tool-bar-menu__wrapper p {
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.tool-bar-menu__list {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+.tool-bar-menu__item {
+  display: flex;
+  align-items: center;
+}
+.tool-bar-menu__input-container {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.number-count {
+  width: 54px;
+  height: 54px;
+
+  border: none;
+  outline: none;
+}
+
+.form-number-count,
+.form-sort-by-input {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.sort-by-input {
+  width: 188px;
+  height: 54px;
+  border: none;
+}
+.tool-bar-menu__input-container p {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.tool-bar-menu__link {
+  display: flex;
+  align-items: center;
+  fill: none;
+}
+.tool-bar-menu__link-svg-icons {
+  width: 30px;
+  height: 30px;
+}
+
+.tool-bar-menu p:nth-child(1) {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.tool-bar-menu p:nth-child(2) {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}

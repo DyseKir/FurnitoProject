@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Furniro</title>
+    <link
+      rel="stylesheet"
+      href="../css/main.min.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+     <header>
+      <div class="header__container">
+        <nav class="header-nav">
+          <div class="header-logo-container">
+            <img
+              class="logo-img"
+              src="../img/logo-Furniro.png"
+              alt="Furniro-logo" />
+            <a
+              class="logo-link"
+              href="../pages/index.html"
+              >Furniro</a
+            >
+          </div>
+
+          <ul class="header-nav__link-list">
+            <li class="header-nav__link-item">
+              <a
+                class="header-nav__link"
+                href="../pages/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="header-nav__link-item">
+              <a
+                class="header-nav__link"
+                href="../pages/shop.html"
+                >Shop</a
+              >
+            </li>
+            <li class="header-nav__link-item">
+              <a
+                class="header-nav__link"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li class="header-nav__link-item">
+              <a
+                class="header-nav__link"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <ul class="header-nav__icon-link">
+            <a class="header-nav__link">
+              <svg class="header-nav__link-svg-icons">
+                <use href="../img/sprite.svg#icon-mdi_account-alert-outline">
+              </svg>
+            </a>
+            <a class="header-nav__link"> 
+              <svg class="header-nav__link-svg-icons">
+                <use href="../img/sprite.svg#icon-akar-icons_search" style="fill: none;">
+              </svg>
+            </a>
+            <a class="header-nav__link" href="./cart.html">
+              <svg class="header-nav__link-svg-icons">
+                <use href="../img/sprite.svg#icon-akar-icons_heart" style="fill: none;">
+              </svg>
+            </a>
+            <a class="header-nav__link" id="modal-open"> 
+              <svg class="header-nav__link-svg-icons">
+                <use href="../img/sprite.svg#icon-ant-design_shopping-cart-outlined">
+              </svg>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+    <section class="hero-section-cart">
+        <div class="hero-section-cart__wrapper">
+          <div class="hero-section-cart__wrapper-text">
+            <h1 class="hero-section-cart__title">cart</h1>
+            <ul class="hero-section-cart__list">
+              <li class="hero-section-cart__item">
+                <a
+                  class="hero-section-cart-links"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <svg class="dash-icons_arrow">
+                <use
+                  href="./img/sprite.svg#icon-dashicons_arrow-down-alt2"></use>
+              </svg>
+              <li class="hero-section-cart__item">
+                <a
+                  class="hero-section-cart-links"
+                  href=""
+                  >cart</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <section class="cart-totals-section">
+        <div class="container">
+            <div class="cart-totals-wrapper">
+            <ul class="cart-totals-list">
+                <li class="cart-totals-item">Product</li>
+                <li class="cart-totals-item">Price</li>
+                <li class="cart-totals-item">Quantity</li>
+                <li class="cart-totals-item">Subtotal</li>
+            </ul>
+            <div class="card-cart-totals">
+                <h3>Cart Totals</h3>
+                <div class="card-cart-totals__text-subtotal">
+                <p>Subtotal</p>
+                <p>Rs. </p>
+                </div>
+                <div class="card-cart-totals__text-total">
+                <p>Total</p>
+                <p>Rs. </p>
+                </div>
+                <button class="check-out-button" id="check-out-button" type="button">Check Out</button>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantages-section">
+        <ul class="advantages-section__list">
+          <li class="advantages-section__item">
+            <svg class="advantages-section__icon">
+              <use href="../img/sprite.svg#icon-trophy-1">
+            </svg>
+            <div class="advantages-section__item-text">
+            <p>High Quality</p>
+            <p>crafted from top materials</p>
+            </div>
+          </li>
+          <li class="advantages-section__item">
+             <svg class="advantages-section__icon">
+               <use href="../img/sprite.svg#icon-guarantee">
+             </svg>
+             <div class="advantages-section__item-text">
+             <p>Warranty Protection</p>
+             <p>Over 2 years</p>
+             </div>
+          </li>
+          <li class="advantages-section__item">
+             <svg class="advantages-section__icon">
+               <use href="../img/sprite.svg#icon-shipping">
+             </svg>
+             <div class="advantages-section__item-text">
+             <p>Free Shipping</p>
+             <p>Order over 150 $</p>
+             </div>
+          </li>
+          <li class="advantages-section__item">
+             <svg class="advantages-section__icon">
+               <use href="../img/sprite.svg#icon-customer-support">
+             </svg>
+             <div class="advantages-section__item-text">
+             <p>24 / 7 Support</p>
+             <p>Dedicated support</p>
+             </div>
+          </li>
+        </ul>
+    </section>
+    <hr class="break-line">
+    <footer>
+      <div class="container">
+        <div class="address-container-wrapper">
+          <div class="address-container">
+            <p>Funiro.</p>
+
+            <p>400 University Drive Suite 200 Coral Gables,</p>
+            <p>FL 33134 USA</p>
+          </div>
+          <div class="footer-nav-container">
+            <nav class="footer-nav">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-list-title">links</li>
+                <li class="footer-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >Home</a
+                  >
+                </li>
+                <li class="footer-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >Shop</a
+                  >
+                </li>
+                <li class="footer-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >About</a
+                  >
+                </li>
+                <li class="footer-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="footer-help-nav">
+              <ul class="footer-help-nav-list">
+                <li class="footer-nav-list-title">Help</li>
+                <li class="footer-help-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >Payment Options</a
+                  >
+                </li>
+                <li class="footer-help-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >Returns</a
+                  >
+                </li>
+                <li class="footer-help-nav-item">
+                  <a
+                    class="footer-link"
+                    href=""
+                    >Privacy Policies</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <form class="footer-nav-email-subscribe">
+            <p class="footer-nav-list-title">Newsletter</p>
+            <label for="newsletter"></label>
+            <input
+              class="newsletter-input"
+              type="text"
+              id="newsletter"
+              name="newsletter"
+              value="Enter Your Email Address" />
+            <input
+              class="newsletter-input-button"
+              type="submit"
+              value="SUBSCRIBE" />
+          </form>
+        </div>
+        <hr class="break-line">
+        <p class="copyright-string">2023 furino. All rights reserved</p>
+      </div>
+    </footer>
+    </main>
+  <div class="shopping-cart-back-drop">
+  <div class="shopping-cart-modal-window">
+    <div class="shopping-cart-modal__wrapper">
+        <h2>Shopping Cart</h2>
+        <svg class="icon-group" id="modal-close">
+          <use href="./img/sprite.svg#icon-Group"></use>
+        </svg>
+        <hr>
+     <div class="shopping-cart-modal-window-product">
+          <img class="shopping-cart-img" src="./img/modal-preview-img.jpg" alt="">
+           <svg class="icon-vector" id="delete-product">
+          <use href="./img/sprite.svg#icon-Vector"></use>
+          </svg>
+          <div class="shopping-cart-text">
+          <h3>Asgaard sofa</h3>
+          <div class="shopping-cart-text-main">
+          <p>1</p>
+          <p>x</p>
+          <p>Rs. 250,000.00</p>
+          </div>
+          </div>
+      </div>
+       <div class="shopping-cart-modal-window-product">
+          <img class="shopping-cart-img" src="./img/modal-preview-img.jpg" alt="">
+           <svg class="icon-vector" id="delete-product">
+          <use href="./img/sprite.svg#icon-Vector"></use>
+          </svg>
+          <div class="shopping-cart-text">
+          <h3>Asgaard sofa</h3>
+          <div class="shopping-cart-text-main">
+          <p>1</p>
+          <p>x</p>
+          <p>Rs. 250,000.00</p>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <script src="../Js/modal.js"></script>
+    <script src="../Js/render-card-shop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+.cart-totals-wrapper {
+  margin: 72px 0px 84px 0px;
+  gap: 30px;
+  display: flex;
+}
+.cart-totals-list {
+  justify-content: space-around;
+  align-items: center;
+  width: 816px;
+  height: 54px;
+  background: #f9f1e7;
+  display: flex;
+}
+.cart-totals-item {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.card-cart-totals {
+  width: 393px;
+  height: 390px;
+  background: #f9f1e7;
+}
+
+.card-cart-totals h3 {
+  padding-top: 14px;
+  text-align: center;
+
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+.card-cart-totals__text-subtotal,
+.card-cart-totals__text-total {
+  gap: 62px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 60px;
+}
+.card-cart-totals p:nth-child(1) {
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.card-cart-totals__text-subtotal p:nth-child(2) {
+  color: #9f9f9f;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.card-cart-totals__text-total p:nth-child(2) {
+  color: #b88e2f;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.check-out-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 42px auto;
+  width: 222px;
+  height: 58px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background-color: inherit;
+
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  &:focus {
+  }
+}

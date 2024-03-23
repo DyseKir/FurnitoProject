@@ -1,0 +1,27 @@
+@import "./base";
+
+@import "./container";
+
+@import "./shopping-cart-modal-window";
+
+//main-html
+@import "./header-section";
+@import "./hero-section";
+@import "./new-collection";
+@import "./product-section";
+@import "./rooms-section";
+@import "./furniture-section";
+@import "./footer";
+
+//shop-html
+
+@import "./shop/hero-section-shop";
+@import "./shop/tool-bar-menu";
+@import "./shop/our-product-section-shop";
+@import "./shop/advantages-section-shop";
+
+//cart-html
+
+@import "./cart/hero-section-cart";
+@import "./cart/cart-totals-section";
+@import "./registration-modal";

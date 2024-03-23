@@ -1,0 +1,49 @@
+.hero-section-shop {
+  width: 100%;
+  min-width: 1440px;
+  height: auto;
+}
+.dash-icons_arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-section-shop__wrapper {
+  background-image: url(../img/shop-hero-img3.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; /* Используйте cover для заполнения всей области */
+}
+.hero-section-shop__wrapper-text {
+  z-index: 1;
+  position: relative;
+  padding: 120px 0px 98px;
+}
+.hero-section-shop__title {
+  text-align: center;
+
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+}
+.hero-section-shop-links {
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  &:focus {
+    color: #000;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.hero-section-shop__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

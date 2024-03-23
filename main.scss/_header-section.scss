@@ -1,0 +1,44 @@
+.logo-link {
+  color: #000;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+}
+.header-nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav__link-list {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+.header-nav__link {
+  display: flex;
+  align-items: center;
+
+  color: #000;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.header-nav__icon-link {
+  align-items: center;
+  display: flex;
+  gap: 45px;
+}
+.header-nav__link-svg-icons {
+  width: 28px;
+  height: 28px;
+}

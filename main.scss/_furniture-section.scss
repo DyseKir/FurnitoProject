@@ -1,0 +1,38 @@
+.furniture-section {
+  height: 800px;
+}
+
+.furniture-section p:nth-child(2) {
+  margin-top: 68px;
+
+  color: #616161;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+}
+.furniture-section p:nth-child(3) {
+  color: #3a3a3a;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+}
+
+.furniture-section-img-1,
+.furniture-section-img-2,
+.furniture-section-img-3,
+.furniture-section-img-4,
+.furniture-section-img-5,
+.furniture-section-img-6,
+.furniture-section-img-7,
+.furniture-section-img-8,
+.furniture-section-img-9{
+  position: absolute;
+}
+.furniture-section-img-1{
+}
+.furniture-section-img-2{
+}
