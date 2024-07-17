@@ -1,0 +1,68 @@
+.header {
+  &__container {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  &__logo-furniro {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  &__nav {
+    align-items: center;
+    width: 100%;
+    display: flex;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  &__link-list {
+    padding-left: 222px;
+    display: flex;
+    align-items: center;
+    gap: 75px;
+  }
+
+  &__link-item {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__link {
+    padding: 38px 0px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon-link {
+    margin-left: 160px;
+    align-items: center;
+    display: flex;
+    gap: 45px;
+  }
+
+  &__icon-link-svg {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -21,102 +21,109 @@
       rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <nav class="header-nav">
-          <div class="header-logo-container">
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a
+            class="header__logo-link"
+            href="../pages/index.html">
             <img
-              class="logo-img"
+              class="header__logo-img"
               src="../img/logo-Furniro.png"
               alt="Furniro-logo" />
-            <a
-              class="logo-link"
-              href="../pages/index.html"
-              >Furniro</a
-            >
-          </div>
-
-          <ul class="header-nav__link-list">
-            <li class="header-nav__link-item">
+            <h1 class="header__logo-furniro">Furniro</h1>
+          </a>
+          <ul class="header__link-list">
+            <li class="header__link-item">
               <a
-                class="header-nav__link"
+                class="header__link"
                 href="../pages/index.html"
                 >Home</a
               >
             </li>
-            <li class="header-nav__link-item">
+            <li class="header__link-item">
               <a
-                class="header-nav__link"
+                class="header__link"
                 href="../pages/shop.html"
                 >Shop</a
               >
             </li>
-            <li class="header-nav__link-item">
+            <li class="header__link-item">
               <a
-                class="header-nav__link"
+                class="header__link"
                 href="#"
                 >About</a
               >
             </li>
-            <li class="header-nav__link-item">
+            <li class="header__link-item">
               <a
-                class="header-nav__link"
+                class="header__link"
                 href="#"
                 >Contact</a
               >
             </li>
           </ul>
 
-          <ul class="header-nav__icon-link">
-            <a class="header-nav__link">
-              <svg class="header-nav__link-svg-icons">
-                <use
-                  href="../img/sprite.svg#icon-mdi_account-alert-outline"></use>
-              </svg>
-            </a>
-            <a class="header-nav__link">
-              <svg class="header-nav__link-svg-icons">
-                <use
-                  href="../img/sprite.svg#icon-akar-icons_search"
-                  style="fill: none"></use>
-              </svg>
-            </a>
-            <a
-              class="header-nav__link"
-              href="../pages/cart.html">
-              <svg class="header-nav__link-svg-icons">
-                <use
-                  href="../img/sprite.svg#icon-akar-icons_heart"
-                  style="fill: none"></use>
-              </svg>
-            </a>
-            <a
-              class="header-nav__link"
-              id="modal-open">
-              <svg class="header-nav__link-svg-icons">
-                <use
-                  href="../img/sprite.svg#icon-ant-design_shopping-cart-outlined"></use>
-              </svg>
-            </a>
+          <ul class="header__icon-link">
+            <li class="header__icon-link-item">
+              <a
+                class="header__icon-link-a"
+                href="#">
+                <svg class="header__icon-link-svg">
+                  <use
+                    href="../img/sprite.svg#icon-mdi_account-alert-outline"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__icon-link-item">
+              <a
+                class="header__icon-link-a"
+                href="#">
+                <svg class="header__icon-link-svg">
+                  <use
+                    href="../img/sprite.svg#icon-akar-icons_search"
+                    style="fill: none"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__icon-link-item">
+              <a
+                class="header__icon-link-a"
+                href="../pages/cart.html">
+                <svg class="header__icon-link-svg">
+                  <use
+                    href="../img/sprite.svg#icon-akar-icons_heart"
+                    style="fill: none"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__icon-link-item">
+              <a
+                class="header__icon-link-a"
+                id="modal-open">
+                <svg class="header__icon-link-svg">
+                  <use
+                    href="../img/sprite.svg#icon-ant-design_shopping-cart-outlined"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
-      <section class="hero-section">
+    <main class="main">
+      <section class="hero section">
         <div class="container">
-          <h1 class="is-hidden">Discover new collection</h1>
-
-          <div class="hero-card">
-            <h2>New Arrival</h2>
-            <p>Discover Our</p>
-            <p>New Collection</p>
-            <p>
+          <div class="hero__card">
+            <h2 class="hero__title">New Arrival</h2>
+            <p class="hero__text hero__text--primary">Discover Our</p>
+            <p class="hero__text hero__text--primary">New Collection</p>
+            <p class="hero__text hero__text--secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis.
             </p>
             <button
-              class="hero-card-button"
+              class="hero__button"
               type="button">
               BUY NOW
             </button>
@@ -124,38 +131,42 @@
         </div>
       </section>
 
-      <section class="new-collection-section">
+      <section class="new-collection section">
         <div class="container">
           <div class="new-collection__wrapper">
             <h2 class="new-collection__title">Browse The Range</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="new-collection__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
 
             <ul class="new-collection__list">
               <li class="new-collection__item">
-                <article class="new-collection-card">
+                <article class="new-collection__card">
                   <img
-                    class="card-img"
+                    class="new-collection__card-img"
                     src="../img/dining-img.jpg"
-                    alt="" />
-                  <p>Dining</p>
+                    alt="Dining" />
+                  <p class="new-collection__card-text">Dining</p>
                 </article>
               </li>
+
               <li class="new-collection__item">
-                <article class="new-collection-card">
+                <article class="new-collection__card">
                   <img
-                    class="card-img"
+                    class="new-collection__card-img"
                     src="../img/living-img.jpg"
-                    alt="" />
-                  <p>Living</p>
+                    alt="Living" />
+                  <p class="new-collection__card-text">Living</p>
                 </article>
               </li>
+
               <li class="new-collection__item">
-                <article class="new-collection-card">
+                <article class="new-collection__card">
                   <img
-                    class="card-img"
+                    class="new-collection__card-img"
                     src="../img/bedroom-img.jpg"
-                    alt="" />
-                  <p>Bedroom</p>
+                    alt="Bedroom" />
+                  <p class="new-collection__card-text">Bedroom</p>
                 </article>
               </li>
             </ul>
@@ -163,148 +174,117 @@
         </div>
       </section>
 
-      <section class="product-section">
+      <section class="product section">
         <div class="container">
-          <div class="product-section__wrapper">
-            <h2 class="product-section__title">Our Products</h2>
-          </div>
+          <h2 class="product__title">Our Products</h2>
+          <ul class="product__list"></ul>
+
+          <button class="product__show-more-btn">Show More</button>
         </div>
       </section>
 
-      <section class="rooms-section">
+      <footer class="footer">
         <div class="container">
-          <div class="rooms-section__text-container">
-            <h2 class="is-hidden">Beautiful rooms</h2>
-            <p>50+ Beautiful rooms</p>
-            <p>inspiration</p>
-            <p>Our designer already made a lot of beautiful</p>
-            <p>prototipe of rooms that inspire you</p>
-            <button
-              class="rooms-section__button"
-              type="button">
-              Explore More
-            </button>
+          <div class="footer__address-wrapper">
+            <div class="footer__address">
+              <a
+                class="footer__address-logo"
+                href="#"
+                >Funiro.</a
+              >
+              <p class="footer__address-text">
+                400 University Drive Suite 200 Coral <br />
+                Gables,
+                <br />
+                FL 33134 USA
+              </p>
+            </div>
+            <div class="footer__nav-wrapper">
+              <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-title">Links</li>
+                  <li class="footer__nav-item">
+                    <a
+                      class="footer__nav-link"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      class="footer__nav-link"
+                      href="#"
+                      >Shop</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      class="footer__nav-link"
+                      href="#"
+                      >About</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      class="footer__nav-link"
+                      href="#"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <nav class="footer__help-nav">
+                <ul class="footer__help-list">
+                  <li class="footer__help-title">Help</li>
+                  <li class="footer__help-item">
+                    <a
+                      class="footer__help-link"
+                      href="#"
+                      >Payment Options</a
+                    >
+                  </li>
+                  <li class="footer__help-item">
+                    <a
+                      class="footer__help-link"
+                      href="#"
+                      >Returns</a
+                    >
+                  </li>
+                  <li class="footer__help-item">
+                    <a
+                      class="footer__help-link"
+                      href="#"
+                      >Privacy Policies</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <form class="footer__subscribe">
+              <p class="footer__subscribe-title">Newsletter</p>
+              <label
+                for="newsletter-footer-input"
+                class="footer__subscribe-label"></label>
+              <input
+                class="footer__subscribe-input"
+                type="email"
+                id="newsletter-footer-input"
+                name="newsletter"
+                placeholder="Enter Your Email Address" />
+              <input
+                class="footer__subscribe-button"
+                type="submit"
+                value="SUBSCRIBE" />
+            </form>
           </div>
+          <hr class="break-line" />
+          <p class="footer__copyright">2023 Furniro. All rights reserved</p>
         </div>
-      </section>
+      </footer>
 
-      <section class="furniture-section">
-        <div class="container">
-          <h2 class="is-hidden">furniture</h2>
-          <p>Share your setup with</p>
-          <p>#FuniroFurniture</p>
-          <img
-            class="furniture-section-img-1"
-            src="../img/Rectangle 36.jpg"
-            alt="" />
-          <img
-            class="furniture-section-img-2"
-            src="../img/Rectangle 37.jpg"
-            alt="" />
-          <!-- <img class="furniture-section-img-3" src="../img/Rectangle 38.jpg" alt=""> -->
-          <!-- <img class="furniture-section-img-4" src="../img/Rectangle 39.jpg" alt=""> -->
-          <!-- <img class="furniture-section-img-5" src="../img/Rectangle 40.jpg" alt=""> -->
-          <!-- <img class="furniture-section-img-6" src="../img/Rectangle 41.jpg" alt=""> -->
-          <!-- <img class="furniture-section-img-7" src="../img/Rectangle 43.jpg" alt=""> -->
-          <!-- <img class="furniture-section-img-8" src="../img/Rectangle 44.jpg" alt=""> -->
-          <!-- <img class="furniture-section-img-9" src="../img/Rectangle 45.jpg" alt="">  -->
-        </div>
-      </section>
+      <script src="../Js/modal.js"></script>
+      <script src="../Js/render-card-main-produc.js"></script>
+      <script src="../Js/render-card-shop.js"></script>
     </main>
-    <hr class="break-line" />
-    <footer>
-      <div class="container">
-        <div class="address-container-wrapper">
-          <div class="address-container">
-            <p>Funiro.</p>
-
-            <p>400 University Drive Suite 200 Coral Gables,</p>
-            <p>FL 33134 USA</p>
-          </div>
-          <div class="footer-nav-container">
-            <nav class="footer-nav">
-              <ul class="footer-nav-list">
-                <li class="footer-nav-list-title">links</li>
-                <li class="footer-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >Home</a
-                  >
-                </li>
-                <li class="footer-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >Shop</a
-                  >
-                </li>
-                <li class="footer-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >About</a
-                  >
-                </li>
-                <li class="footer-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </nav>
-
-            <nav class="footer-help-nav">
-              <ul class="footer-help-nav-list">
-                <li class="footer-nav-list-title">Help</li>
-                <li class="footer-help-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >Payment Options</a
-                  >
-                </li>
-                <li class="footer-help-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >Returns</a
-                  >
-                </li>
-                <li class="footer-help-nav-item">
-                  <a
-                    class="footer-link"
-                    href=""
-                    >Privacy Policies</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <form class="footer-nav-email-subscribe">
-            <p class="footer-nav-list-title">Newsletter</p>
-            <label for="newsletter"></label>
-            <input
-              class="newsletter-input"
-              type="text"
-              id="newsletter-footer-input"
-              name="newsletter"
-              value="Enter Your Email Address" />
-            <input
-              class="newsletter-input-button"
-              type="submit"
-              value="SUBSCRIBE" />
-          </form>
-        </div>
-        <hr class="break-line" />
-        <p class="copyright-string">2023 furino. All rights reserved</p>
-      </div>
-    </footer>
-
-    <script src="../Js/modal.js"></script>
-    <script src="../Js/render-card-main-produc.js"></script>
-    <script src="../Js/render-card-shop.js"></script>
   </body>
 </html>

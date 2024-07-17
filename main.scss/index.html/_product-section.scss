@@ -1,0 +1,39 @@
+.product {
+  &__title {
+    color: #3a3a3a;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px; /* 48px */
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-top: 32px;
+  }
+  &__show-more-btn {
+    margin: 32px 498px 70px;
+    width: 246px;
+    height: 48px;
+    border: none;
+    color: #fff;
+    background-color: var(--Primary, #b88e2f);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    &:hover {
+      color: var(--Primary, #b88e2f);
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      border: 1px solid #b88e2f;
+      background: #fff;
+      cursor: pointer;
+    }
+  }
+}

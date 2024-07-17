@@ -4,129 +4,289 @@
       "id": "1",
       "name": "Syltherine",
       "type": "Stylish cafe chair",
-      "price": "33$",
+      "price": "33",
       "discountedPrice": "20$",
-      "img": "../img/Syltherine-img.jpg"
+      "img": "../img/Syltherine-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "2",
       "name": "Leviosa",
       "type": "Stylish cafe chair",
-      "price": "19$",
+      "price": "19",
       "discountedPrice": "",
-      "img": "../img/leviosa-img.jpg"
+      "img": "../img/leviosa-img.jpg",
+      "filter": "Default"
     },
     {
       "id": "3",
       "name": "Lolito",
       "type": "Luxury big sofa",
-      "price": "46$",
+      "price": "46",
       "discountedPrice": "27$",
-      "img": "../img/Lolito-img.jpg"
+      "img": "../img/Lolito-img.jpg",
+      "filter": "Default"
     },
     {
       "id": "4",
       "name": "Respira",
       "type": "Outdoor bar table and stool",
-      "price": "17$",
+      "price": "17",
       "discountedPrice": "",
-      "img": "../img/Respirai-img.jpg"
+      "img": "../img/Respirai-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "5",
       "name": "Grifo",
       "type": "Night lamp",
-      "price": "35$",
+      "price": "35",
       "discountedPrice": "",
-      "img": "../img/Grifo-img.jpg"
+      "img": "../img/Grifo-img.jpg",
+      "filter": "Default"
     },
     {
       "id": "6",
       "name": "Muggo",
       "type": "Small mug",
-      "price": "23$",
+      "price": "23",
       "discountedPrice": "",
-      "img": "../img/Muggo-img.jpg"
+      "img": "../img/Muggo-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "7",
       "name": "Pingky",
       "type": "Cute bed set",
-      "price": "37$",
+      "price": "37",
       "discountedPrice": "26$",
-      "img": "../img/Pingky-img.jpg"
+      "img": "../img/Pingky-img.jpg",
+      "filter": "Default"
     },
     {
       "id": "8",
       "name": "Potty",
       "type": "Minimalist flower pot",
-      "price": "20$",
+      "price": "20",
       "discountedPrice": "",
-      "img": "../img/Potty.jpg"
+      "img": "../img/Potty.jpg",
+      "filter": "High price"
     },
     {
       "id": "9",
       "name": "Syltherine",
       "type": "Stylish cafe chair",
-      "price": "38$",
+      "price": "38",
       "discountedPrice": "29$",
-      "img": "../img/Syltherine-img.jpg"
+      "img": "../img/Syltherine-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "10",
       "name": "Leviosa",
       "type": "Stylish cafe chair",
-      "price": "36$",
+      "price": "36",
       "discountedPrice": "",
-      "img": "../img/leviosa-img.jpg"
+      "img": "../img/leviosa-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "11",
       "name": "Lolito",
       "type": "Luxury big sofa",
-      "price": "46$",
+      "price": "46",
       "discountedPrice": "25$",
-      "img": "../img/Lolito-img.jpg"
+      "img": "../img/Lolito-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "12",
       "name": "Respira",
       "type": "Outdoor bar table and stool",
-      "price": "18$",
+      "price": "18",
       "discountedPrice": "",
-      "img": "../img/Respirai-img.jpg"
+      "img": "../img/Respirai-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "13",
       "name": "Grifo",
       "type": "Night lamp",
-      "price": "32$",
+      "price": "32",
       "discountedPrice": "",
-      "img": "../img/Grifo-img.jpg"
+      "img": "../img/Grifo-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "14",
       "name": "Muggo",
       "type": "Small mug",
-      "price": "24$",
+      "price": "24",
       "discountedPrice": "",
-      "img": "../img/Muggo-img.jpg"
+      "img": "../img/Muggo-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "15",
       "name": "Pingky",
       "type": "Cute bed set",
-      "price": "21$",
+      "price": "21",
       "discountedPrice": "15$",
-      "img": "../img/Pingky-img.jpg"
+      "img": "../img/Pingky-img.jpg",
+      "filter": "High price"
     },
     {
       "id": "16",
       "name": "Potty",
       "type": "Minimalist flower pot",
-      "price": "38$",
+      "price": "38",
       "discountedPrice": "",
-      "img": "../img/Potty.jpg"
+      "img": "../img/Potty.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "17",
+      "name": "Syltherine",
+      "type": "Stylish cafe chair",
+      "price": "33",
+      "discountedPrice": "20$",
+      "img": "../img/Syltherine-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "18",
+      "name": "Leviosa",
+      "type": "Stylish cafe chair",
+      "price": "19",
+      "discountedPrice": "",
+      "img": "../img/leviosa-img.jpg",
+      "filter": "Default"
+    },
+    {
+      "id": "19",
+      "name": "Lolito",
+      "type": "Luxury big sofa",
+      "price": "46",
+      "discountedPrice": "27$",
+      "img": "../img/Lolito-img.jpg",
+      "filter": "Default"
+    },
+    {
+      "id": "20",
+      "name": "Respira",
+      "type": "Outdoor bar table and stool",
+      "price": "17",
+      "discountedPrice": "",
+      "img": "../img/Respirai-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "21",
+      "name": "Grifo",
+      "type": "Night lamp",
+      "price": "35",
+      "discountedPrice": "",
+      "img": "../img/Grifo-img.jpg",
+      "filter": "Default"
+    },
+    {
+      "id": "22",
+      "name": "Muggo",
+      "type": "Small mug",
+      "price": "23",
+      "discountedPrice": "",
+      "img": "../img/Muggo-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "23",
+      "name": "Pingky",
+      "type": "Cute bed set",
+      "price": "37",
+      "discountedPrice": "26$",
+      "img": "../img/Pingky-img.jpg",
+      "filter": "Default"
+    },
+    {
+      "id": "24",
+      "name": "Potty",
+      "type": "Minimalist flower pot",
+      "price": "20",
+      "discountedPrice": "",
+      "img": "../img/Potty.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "25",
+      "name": "Syltherine",
+      "type": "Stylish cafe chair",
+      "price": "38",
+      "discountedPrice": "29$",
+      "img": "../img/Syltherine-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "26",
+      "name": "Leviosa",
+      "type": "Stylish cafe chair",
+      "price": "36",
+      "discountedPrice": "",
+      "img": "../img/leviosa-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "27",
+      "name": "Lolito",
+      "type": "Luxury big sofa",
+      "price": "46",
+      "discountedPrice": "25$",
+      "img": "../img/Lolito-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "28",
+      "name": "Respira",
+      "type": "Outdoor bar table and stool",
+      "price": "18",
+      "discountedPrice": "",
+      "img": "../img/Respirai-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "29",
+      "name": "Grifo",
+      "type": "Night lamp",
+      "price": "32",
+      "discountedPrice": "",
+      "img": "../img/Grifo-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "30",
+      "name": "Muggo",
+      "type": "Small mug",
+      "price": "24",
+      "discountedPrice": "",
+      "img": "../img/Muggo-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "31",
+      "name": "Pingky",
+      "type": "Cute bed set",
+      "price": "21",
+      "discountedPrice": "15$",
+      "img": "../img/Pingky-img.jpg",
+      "filter": "High price"
+    },
+    {
+      "id": "32",
+      "name": "Potty",
+      "type": "Minimalist flower pot",
+      "price": "38",
+      "discountedPrice": "",
+      "img": "../img/Potty.jpg",
+      "filter": "High price"
     }
   ]
 }

@@ -3,7 +3,7 @@
 }
 .tool-bar-menu__wrapper {
   padding: 22px 0px;
-  gap: 348px;
+  gap: 20%;
   display: flex;
 }
 .tool-bar-menu__wrapper p {
@@ -24,31 +24,10 @@
   align-items: center;
 }
 .tool-bar-menu__input-container {
-  gap: 30px;
   display: flex;
   align-items: center;
 }
 
-.number-count {
-  width: 54px;
-  height: 54px;
-
-  border: none;
-  outline: none;
-}
-
-.form-number-count,
-.form-sort-by-input {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.sort-by-input {
-  width: 188px;
-  height: 54px;
-  border: none;
-}
 .tool-bar-menu__input-container p {
   color: #000;
   font-family: "Poppins", sans-serif;
@@ -78,4 +57,20 @@
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+.form-sort-by-input {
+  color: #9f9f9f;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+
+  border: none;
+  padding: 12px 18px;
+}
+.form-sort-by-label {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 30px;
 }

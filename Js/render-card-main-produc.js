@@ -1,124 +1,102 @@
-let productsData;
-
 const getProducts = async () => {
   const response = await fetch("../data/cards.json");
-  productsData = await response.json();
-  return productsData;
+  const products = await response.json();
+  return products["product-card"].slice(0, 8);
 };
-
 const renderProducts = async () => {
-  try {
-    const container = document.querySelector(".product-section__wrapper");
-    const cardListContainer = document.createElement("ul");
-    cardListContainer.classList.add("product-section__list");
-    container.appendChild(cardListContainer);
+  const products = await getProducts();
+  const container = document.querySelector(".product__list");
 
-    const loadMoreBtn = document.createElement("button");
-    loadMoreBtn.textContent = "Show More";
-    loadMoreBtn.classList.add("product-section__button");
-    container.appendChild(loadMoreBtn);
+  for (const product of products) {
+    // creating elements
+    const productItem = document.createElement("li");
+    const productCard = document.createElement("article");
+    const productImg = document.createElement("img");
+    const productCardText = document.createElement("div");
+    const productTitle = document.createElement("h3");
+    const productText = document.createElement("p");
+    const productTextPrice = document.createElement("p");
+    const productTextPriceDiscount = document.createElement("p");
 
-    const productCards = productsData["product-card"];
-    let displayedCards = 0;
-    const batchSize = 8;
+    // setting values for elements
+    productItem.classList.add("product-section-shop__item");
+    productCard.classList.add("product-section-shop__card");
+    productImg.classList.add("product-section-shop__card-img");
+    productCardText.classList.add("product-section-shop__card-text");
 
-    const displayNextBatch = () => {
-      const batch = productCards.slice(displayedCards, displayedCards + batchSize);
-      displayedCards += batchSize;
+    productImg.src = product.img;
+    productTitle.textContent = product.name;
+    productText.textContent = product.type;
+    productTextPrice.textContent = `$${product.price}`;
 
-      for (const product of batch) {
-        createProductCard(cardListContainer, product);
-      }
+    if (product.discountedPrice) {
+      productTextPriceDiscount.textContent = `$${product.discountedPrice}`;
+    } else {
+      productTextPriceDiscount.textContent = "";
+    }
 
-      if (displayedCards >= productCards.length) {
-        loadMoreBtn.style.display = "none";
-      }
-    };
+    productCardText.appendChild(productTitle);
+    productCardText.appendChild(productText);
+    productCardText.appendChild(productTextPrice);
 
-    displayNextBatch(); // Отображаем первые 8 карточек
+    if (product.discountedPrice) {
+      productCardText.appendChild(productTextPriceDiscount);
+    }
+    productCard.appendChild(productImg);
+    productCard.appendChild(productCardText);
+    productItem.appendChild(productCard);
+    container.appendChild(productItem);
 
-    loadMoreBtn.addEventListener("click", displayNextBatch);
-  } catch (error) {
-    console.error("Ошибка при отображении продуктов:", error);
+    // Hover effect for the product card
+    const hoverContainer = document.createElement("div");
+    const addToCartButton = document.createElement("button");
+    const hoverLinkList = document.createElement("ul");
+
+    const hoverShareLink = document.createElement("a");
+    const hoverCompareLink = document.createElement("a");
+    const hoverLikeLink = document.createElement("a");
+
+    hoverShareLink.classList.add("product-section__card-hover-link");
+    hoverShareLink.textContent = "Share";
+    hoverShareLink.href = "#";
+
+    hoverCompareLink.classList.add("product-section__card-hover-link");
+    hoverCompareLink.textContent = "Compare";
+    hoverCompareLink.href = "#";
+
+    hoverLikeLink.classList.add("product-section__card-hover-link");
+    hoverLikeLink.textContent = "Like";
+    hoverLikeLink.href = "#";
+
+    hoverContainer.classList.add("product-section__card-hover", "is-hidden");
+    addToCartButton.classList.add("add-to-cart-button");
+    addToCartButton.type = "button";
+    addToCartButton.id = "add-to-cart-button";
+    addToCartButton.textContent = "Add to cart";
+    addToCartButton.addEventListener("click", () => addToCart(product));
+
+    hoverLinkList.classList.add("product-section__card-hover-link-list");
+
+    hoverLinkList.appendChild(hoverShareLink);
+    hoverLinkList.appendChild(hoverCompareLink);
+    hoverLinkList.appendChild(hoverLikeLink);
+
+    hoverContainer.appendChild(addToCartButton);
+    hoverContainer.appendChild(hoverLinkList);
+
+    productCard.appendChild(hoverContainer);
+
+    productCard.addEventListener("mouseenter", () => {
+      hoverContainer.classList.remove("is-hidden");
+      hoverContainer.classList.add("is-visible");
+    });
+
+    productCard.addEventListener("mouseleave", () => {
+      hoverContainer.classList.remove("is-visible");
+      hoverContainer.classList.add("is-hidden");
+    });
   }
 };
-
-const createProductCard = (cardListContainer, product) => {
-  const productItem = document.createElement("li");
-  const productCard = document.createElement("article");
-  const productImg = document.createElement("img");
-  const productCardText = document.createElement("div");
-  const productTitle = document.createElement("h3");
-  const productText = document.createElement("p");
-  const productTextPrice = document.createElement("p");
-  const productTextPriceDiscount = document.createElement("p");
-
-  productItem.classList.add("product-section-shop__item");
-  productCard.classList.add("product-section-shop__card");
-  productImg.classList.add("product-section-shop__card-img");
-  productCardText.classList.add("product-section-shop__card-text");
-
-  productImg.src = product.img;
-  productTitle.textContent = product.name;
-  productText.textContent = product.type;
-  productTextPrice.textContent = product.price;
-  productTextPriceDiscount.textContent = product.discountedPrice;
-
-  cardListContainer.appendChild(productItem);
-  productItem.appendChild(productCard);
-  productCard.appendChild(productImg);
-  productCard.appendChild(productCardText);
-  productCardText.appendChild(productTitle);
-  productCardText.appendChild(productText);
-  productCardText.appendChild(productTextPrice);
-  productCardText.appendChild(productTextPriceDiscount);
-
-  const cardHoverHTML = `
-    <div class="product-section__card-hover is-hidden">
-      <button class="add-to-card-button" type="button" id="add-to-card-button">Add to cart</button>
-      <ul class="product-section__card-hover-link-list">
-        <li>
-          <a class="product-section__card-hover-link" href="#">
-            <svg class="product-section__card-hover-link-icons">
-              <use href="../img/sprite.svg#icon-gridicons_share">
-            </svg>
-            Share
-          </a>
-        </li>
-        <li>
-          <a class="product-section__card-hover-link" href="#">
-            <svg class="product-section__card-hover-link-icons">
-              <use href="../img/sprite.svg#icon-compare-svgrepo-com-1">
-            </svg>
-            Compare
-          </a>
-        </li>
-        <li>
-          <a class="product-section__card-hover-link" href="#">
-            <svg class="product-section__card-hover-link-icons">
-              <use href="../img/sprite.svg#icon-Heart">
-            </svg>
-            Like
-          </a>
-        </li>
-      </ul>
-    </div>
-  `;
-
-  productCard.insertAdjacentHTML("beforeend", cardHoverHTML);
-
-  productCard.addEventListener("mouseover", showHoverEffect);
-  productCard.addEventListener("mouseout", hideHoverEffect);
-
-  function showHoverEffect(event) {
-    const cardHover = event.currentTarget.querySelector(".product-section__card-hover");
-    cardHover.classList.remove("is-hidden");
-  }
-
-  function hideHoverEffect(event) {
-    const cardHover = event.currentTarget.querySelector(".product-section__card-hover");
-    cardHover.classList.add("is-hidden");
-  }
-};
-
-getProducts().then(renderProducts);
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+});

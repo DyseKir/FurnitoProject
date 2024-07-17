@@ -1,119 +1,115 @@
-//=====================================================================//
-//=========================Render card==============================//
-//=====================================================================//
-// Функция получения продуктов
 const getProducts = async () => {
-  const response = await fetch("../data/cards.json"); // Запрос на получение данных
-  const cards = await response.json(); // Преобразование ответа в формат JSON
-  return cards; // Возврат полученных данных
+  const response = await fetch("../data/cards.json");
+  const products = await response.json();
+  return products["product-card"];
 };
 
-// Функция отображения продуктов
+const addToCart = product => {
+  const modalList = document.querySelector(
+    ".shopping-cart-modal__wrapper-list"
+  );
+
+  const cartItem = document.createElement("li");
+  cartItem.classList.add("shopping-cart-item");
+  cartItem.textContent = `${product.name} - $${product.price}`;
+  modalList.appendChild(cartItem);
+};
+
 const renderProducts = async () => {
-  try {
-    // Получение данных о продуктах
-    const productsData = await getProducts();
-    const productCards = productsData["product-card"]; // Получение карточек продуктов
+  const products = await getProducts();
+  const container = document.querySelector(".product-section-shop__list");
 
-    // Получение контейнер для отображения продуктов
-    const container = document.querySelector(".product-section-shop__list");
+  for (const product of products) {
+    // creating elements
+    const productItem = document.createElement("li");
+    const productCard = document.createElement("article");
+    const productImg = document.createElement("img");
+    const productCardText = document.createElement("div");
+    const productTitle = document.createElement("h3");
+    const productText = document.createElement("p");
+    const productTextPrice = document.createElement("p");
+    const productTextPriceDiscount = document.createElement("p");
 
-    // Перебор карточек продуктов
-    for (const product of productCards) {
-      // Создание элементов для карточки продукта
-      const productItem = document.createElement("li");
-      const productCard = document.createElement("article");
-      const productImg = document.createElement("img");
-      const productCardText = document.createElement("div");
-      const productTitle = document.createElement("h3");
-      const productText = document.createElement("p");
-      const productTextPrice = document.createElement("p");
-      const productTextPriceDiscount = document.createElement("p");
+    // setting values for elements
+    productItem.classList.add("product-section-shop__item");
+    productCard.classList.add("product-section-shop__card");
+    productImg.classList.add("product-section-shop__card-img");
+    productCardText.classList.add("product-section-shop__card-text");
 
-      // Добавление классов к созданным элементам
-      productItem.classList.add("product-section-shop__item");
-      productCard.classList.add("product-section-shop__card");
-      productImg.classList.add("product-section-shop__card-img");
-      productCardText.classList.add("product-section-shop__card-text");
+    productImg.src = product.img;
+    productTitle.textContent = product.name;
+    productText.textContent = product.type;
+    productTextPrice.textContent = `$${product.price}`;
 
-      // Установка содержимого для элементов
-      productImg.src = product.img;
-      productTitle.textContent = product.name;
-      productText.textContent = product.type;
-      productTextPrice.textContent = product.price;
-      productTextPriceDiscount.textContent = product.discountedPrice;
-
-      // Добавление элементов карточки продукта в контейнер
-      container.appendChild(productItem);
-      productItem.appendChild(productCard);
-      productCard.appendChild(productImg);
-      productCard.appendChild(productCardText);
-      productCardText.appendChild(productTitle);
-      productCardText.appendChild(productText);
-      productCardText.appendChild(productTextPrice);
-      productCardText.appendChild(productTextPriceDiscount);
-      //=====================================================================//
-      //=======================Hover card================================//
-      //=====================================================================//
-
-      // HTML-разметка для всплывающего okla карточки продукта
-      const cardHoverHTML = `
-        <div class="product-section__card-hover is-hidden">
-          <button class="add-to-card-button" type="button" id="add-to-card-button">Add to cart</button>
-          <ul class="product-section__card-hover-link-list">
-            <li>
-              <a class="product-section__card-hover-link" href="#">
-                <svg class="product-section__card-hover-link-icons">
-                  <use href="../img/sprite.svg#icon-gridicons_share">
-                </svg>
-                Share
-              </a>
-            </li>
-            <li>
-              <a class="product-section__card-hover-link" href="#">
-                <svg class="product-section__card-hover-link-icons">
-                  <use href="../img/sprite.svg#icon-compare-svgrepo-com-1">
-                </svg>
-                Compare
-              </a>
-            </li>
-            <li>
-              <a class="product-section__card-hover-link" href="#">
-                <svg class="product-section__card-hover-link-icons">
-                  <use href="../img/sprite.svg#icon-Heart">
-                </svg>
-                Like
-              </a>
-            </li>
-          </ul>
-        </div>
-      `;
-
-      // Добавление HTML-разметки в карточку продукта
-      productCard.insertAdjacentHTML("beforeend", cardHoverHTML);
-
-      // Добавление обработчика событий для отображения всплывающего окна
-      productCard.addEventListener("mouseover", showHoverEffect);
-      productCard.addEventListener("mouseout", hideHoverEffect);
-
-      function showHoverEffect(event) {
-        const cardHover = event.currentTarget.querySelector(
-          ".product-section__card-hover"
-        );
-        cardHover.classList.remove("is-hidden");
-      }
-
-      function hideHoverEffect(event) {
-        const cardHover = event.currentTarget.querySelector(
-          ".product-section__card-hover"
-        );
-        cardHover.classList.add("is-hidden");
-      }
+    if (product.discountedPrice) {
+      productTextPriceDiscount.textContent = `$${product.discountedPrice}`;
+    } else {
+      productTextPriceDiscount.textContent = "";
     }
-  } catch (error) {
-    console.error("Ошибка при отображении продуктов:", error);
+
+    productCardText.appendChild(productTitle);
+    productCardText.appendChild(productText);
+    productCardText.appendChild(productTextPrice);
+
+    if (product.discountedPrice) {
+      productCardText.appendChild(productTextPriceDiscount);
+    }
+    productCard.appendChild(productImg);
+    productCard.appendChild(productCardText);
+    productItem.appendChild(productCard);
+    container.appendChild(productItem);
+
+    // Hover effect for the product card
+    const hoverContainer = document.createElement("div");
+    const addToCartButton = document.createElement("button");
+    const hoverLinkList = document.createElement("ul");
+
+    const hoverShareLink = document.createElement("a");
+    const hoverCompareLink = document.createElement("a");
+    const hoverLikeLink = document.createElement("a");
+
+    hoverShareLink.classList.add("product-section__card-hover-link");
+    hoverShareLink.textContent = "Share";
+    hoverShareLink.href = "#";
+
+    hoverCompareLink.classList.add("product-section__card-hover-link");
+    hoverCompareLink.textContent = "Compare";
+    hoverCompareLink.href = "#";
+
+    hoverLikeLink.classList.add("product-section__card-hover-link");
+    hoverLikeLink.textContent = "Like";
+    hoverLikeLink.href = "#";
+
+    hoverContainer.classList.add("product-section__card-hover", "is-hidden");
+    addToCartButton.classList.add("add-to-cart-button");
+    addToCartButton.type = "button";
+    addToCartButton.id = "add-to-cart-button";
+    addToCartButton.textContent = "Add to cart";
+    addToCartButton.addEventListener("click", () => addToCart(product));
+
+    hoverLinkList.classList.add("product-section__card-hover-link-list");
+
+    hoverLinkList.appendChild(hoverShareLink);
+    hoverLinkList.appendChild(hoverCompareLink);
+    hoverLinkList.appendChild(hoverLikeLink);
+
+    hoverContainer.appendChild(addToCartButton);
+    hoverContainer.appendChild(hoverLinkList);
+
+    productCard.appendChild(hoverContainer);
+
+    productCard.addEventListener("mouseenter", () => {
+      hoverContainer.classList.remove("is-hidden");
+      hoverContainer.classList.add("is-visible");
+    });
+
+    productCard.addEventListener("mouseleave", () => {
+      hoverContainer.classList.remove("is-visible");
+      hoverContainer.classList.add("is-hidden");
+    });
   }
 };
 
-// Вызов функции отображения продуктов
-renderProducts();
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+});
